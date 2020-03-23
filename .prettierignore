@@ -1,0 +1,12 @@
+.vscode
+dist
+e2e
+node_modules
+.editorconfig
+.gitignore
+browserlist
+karma.conf.js
+package-lock.js
+*.ico
+*.png
+*.jpg

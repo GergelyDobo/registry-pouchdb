@@ -1,0 +1,67 @@
+<form #form="ngForm" (ngSubmit)="updateProduct(form)" novalidate>
+	<div class="form">
+		<div class="title">Update Product</div>
+		<div class="errors" *ngIf="isSubmitted">
+			<mat-error *ngIf="manufacturer.hasError('required')">Manufacturer is required!</mat-error>
+			<mat-error *ngIf="name.hasError('required')">Name is required!</mat-error>
+			<mat-error *ngIf="price.hasError('required')">Price is required!</mat-error>
+			<mat-error *ngIf="currency.hasError('required')">Currency is required!</mat-error>
+			<mat-error *ngIf="amount.hasError('required')">Amount is required!</mat-error>
+		</div>
+		<mat-form-field>
+			<input
+				type="text"
+				matInput
+				required
+				[ngModel]="data.manufacturer"
+				name="manufacturer"
+				#manufacturer="ngModel"
+				placeholder="Manufacturer"
+				autocomplete="off"
+			/>
+		</mat-form-field>
+		<mat-form-field>
+			<input type="text" matInput required [ngModel]="data.name" name="name" #name="ngModel" placeholder="Name" autocomplete="off" />
+		</mat-form-field>
+		<mat-form-field>
+			<input
+				type="number"
+				matInput
+				required
+				[ngModel]="data.price"
+				name="price"
+				#price="ngModel"
+				placeholder="Price"
+				autocomplete="off"
+			/>
+		</mat-form-field>
+		<mat-form-field>
+			<input
+				type="text"
+				matInput
+				required
+				[ngModel]="data.currency"
+				name="currency"
+				#currency="ngModel"
+				placeholder="Currency"
+				autocomplete="off"
+			/>
+		</mat-form-field>
+		<mat-form-field>
+			<input
+				type="number"
+				matInput
+				required
+				[ngModel]="data.amount"
+				name="amount"
+				#amount="ngModel"
+				placeholder="Amount"
+				autocomplete="off"
+			/>
+		</mat-form-field>
+		<div class="buttons">
+			<button type="submit" mat-button (click)="submit()">Update</button>
+			<button type="reset" mat-button>Reset</button>
+		</div>
+	</div>
+</form>

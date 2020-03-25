@@ -7,12 +7,13 @@ import { ProductsComponent } from './components/products/products.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NewProductComponent } from './components/new-product/new-product.component';
 import { FormsModule } from '@angular/forms';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
-	declarations: [AppComponent, ProductsComponent, HeaderComponent, NewProductComponent],
+	declarations: [AppComponent, ProductsComponent, HeaderComponent, NewProductComponent, FormComponent],
 	imports: [BrowserModule, BrowserAnimationsModule, MaterialModule, FormsModule],
 	providers: [],
 	bootstrap: [AppComponent],
-	entryComponents: [NewProductComponent]
+	entryComponents: [NewProductComponent, FormComponent]
 })
 export class AppModule {}

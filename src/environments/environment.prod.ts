@@ -1,3 +1,7 @@
 export const environment = {
-  production: true
+	production: true,
+	cloudantConfig: {
+		db_name: 'registry-product',
+		url: ''
+	}
 };

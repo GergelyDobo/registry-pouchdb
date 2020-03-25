@@ -1,0 +1,14 @@
+<div class="header">
+	<div class="title">Registry</div>
+	<div class="menu">
+		<button mat-icon-button [matMenuTriggerFor]="menu">
+			<mat-icon>more_vert</mat-icon>
+		</button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item (click)="createProduct.emit()">
+				<mat-icon>add_box</mat-icon>
+				New product
+			</button>
+		</mat-menu>
+	</div>
+</div>

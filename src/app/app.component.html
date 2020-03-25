@@ -1,0 +1,3 @@
+<app-header (createProduct)="createProduct()"></app-header>
+<app-products [products]="productService.products$ | async" (deleteProduct)="deleteProduct($event)" (updateProduct)="updateProduct($event)">
+</app-products>

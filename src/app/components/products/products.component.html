@@ -1,0 +1,26 @@
+<div class="container">
+	<mat-card *ngFor="let product of products">
+		<mat-card-header>
+			<mat-card-title>{{ product.manufacturer }}</mat-card-title>
+			<mat-card-subtitle>{{ product.name }}</mat-card-subtitle>
+		</mat-card-header>
+
+		<img mat-card-image class="image" src="assets/images/noimg.jpg" alt="noimg.jpg" />
+
+		<mat-card-content>
+			<div>Price: {{ product.price }} {{ product.currency }}</div>
+			<div>Amount: {{ product.amount }} pc</div>
+		</mat-card-content>
+
+		<div class="actions">
+			<button mat-button (click)="updateProduct.emit(product)">
+				<div class="material-icons">update</div>
+				Update
+			</button>
+			<button mat-button (click)="deleteProduct.emit(product)">
+				<div class="material-icons">delete</div>
+				Delete
+			</button>
+		</div>
+	</mat-card>
+</div>
